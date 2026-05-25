@@ -1,5 +1,5 @@
-# Sid-s-TodoList
-Sid's Todo List is a feature-rich, fully responsive task management web application built using modern HTML5, CSS3, and Vanilla JavaScript. Designed with both functionality and user experience in mind, it provides a seamless interface for organizing, editing, and tracking tasks efficiently.
+# Mann-s-TodoList
+Mann's Todo List is a feature-rich, fully responsive task management web application built using modern HTML5, CSS3, and Vanilla JavaScript. Designed with both functionality and user experience in mind, it provides a seamless interface for organizing, editing, and tracking tasks efficiently.
 
 This project goes beyond basic CRUD operations by integrating a wide range of enhancements such as:
 
