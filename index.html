@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./favicon.png" type="image/png" />
+    <link rel="manifest" href="./manifest.json" />
+  </head>
+  <body>
+    <button class="theme-toggle" onclick="toggleDarkMode()">🌓 Theme</button>
+    <header>
+      <div class="header-top">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="header-icon" alt="Todo Icon" />
+        <h1>Sid's Todo List</h1>
+      </div>
+      <div class="time-display" id="timeDisplay"></div>
+    </header>
+
+    <section class="main-section">
+      <form id="todo-form">
+        <input type="text" class="todo-input" placeholder="What needs to be done?" />
+        <input type="date" class="due-date" />
+        <select class="priority-select">
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+          <option value="Low">Low</option>
+        </select>
+        <button class="todo-button" type="submit">➕</button>
+      </form>
+
+      <div class="search-wrapper">
+        <input type="text" id="searchInput" placeholder="🔍 Search tasks..." />
+      </div>
+
+      <div class="stats">
+        <p>Total: <span id="total-count">0</span></p>
+        <p>Completed: <span id="completed-count">0</span></p>
+        <p>Pending: <span id="pending-count">0</span></p>
+      </div>
+
+      <div class="todo-container">
+        <ul class="todo-list"></ul>
+        <div id="empty-state">🎉 You're all caught up!</div>
+      </div>
+
+      <div class="controls">
+        <select name="todos" class="filter-todo">
+          <option value="all">All</option>
+          <option value="completed">Completed</option>
+          <option value="uncompleted">Uncompleted</option>
+        </select>
+        <button class="clear-button">🧹 Clear All</button>
+        <button class="export-button">📤 Export</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>Built with 💙 by Sid</p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

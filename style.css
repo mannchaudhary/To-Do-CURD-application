@@ -1,0 +1,217 @@
+/* ===== Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #f3f4f6, #d1d5db);
+  color: #1f2937;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+body.dark-mode {
+  background: #1f2937;
+  color: #f3f4f6;
+}
+
+/* ===== Header ===== */
+header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.header-icon {
+  width: 48px;
+  height: 48px;
+}
+.time-display {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+/* ===== Form ===== */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.todo-input,
+.due-date,
+.priority-select,
+#searchInput {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.todo-button {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.todo-button:hover {
+  transform: scale(1.1);
+}
+
+/* ===== Search & Filter ===== */
+.search-wrapper {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+#searchInput {
+  width: 60%;
+  max-width: 300px;
+}
+.select,
+.controls {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ===== Todo List ===== */
+.todo-container {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 1rem;
+}
+.todo-list {
+  list-style: none;
+}
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+body.dark-mode .todo {
+  background: #374151;
+  color: white;
+}
+.todo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.todo-item {
+  flex: 1;
+  padding-right: 1rem;
+  font-size: 1rem;
+}
+.todo input[type="text"] {
+  font-size: 1rem;
+  padding: 0.2rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  width: 100%;
+}
+
+/* ===== Buttons ===== */
+.complete-btn,
+.trash-btn {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  transition: transform 0.2s ease;
+}
+.complete-btn:hover,
+.trash-btn:hover {
+  transform: scale(1.2);
+}
+.complete-btn {
+  color: #10b981;
+}
+.trash-btn {
+  color: #ef4444;
+}
+
+/* ===== Task States ===== */
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.fall {
+  transform: translateY(2rem) rotateZ(10deg);
+  opacity: 0;
+}
+
+/* ===== Stats ===== */
+.stats {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 1rem 0;
+  font-weight: bold;
+}
+
+/* ===== Empty State ===== */
+#empty-state {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #6b7280;
+  display: none;
+}
+
+/* ===== Clear / Export ===== */
+.clear-button,
+.export-button,
+.theme-toggle {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #6b7280;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.clear-button:hover,
+.export-button:hover,
+.theme-toggle:hover {
+  background: #4b5563;
+  transform: translateY(-2px);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  form,
+  .controls,
+  .stats {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  #searchInput {
+    width: 90%;
+  }
+}
